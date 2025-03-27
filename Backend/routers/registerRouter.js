@@ -1,5 +1,5 @@
 import express from "express";
-import { userRegister,userLogin,userDetails,userProfile } from "../controllers/userRegister.js";  // Ensure correct import
+import { userRegister,userLogin,userDetails,userProfile } from "../controllers/userRegister.js";
 import authenticateToken from '../middleware/middleware.js'; 
 
 const router = express.Router();

@@ -33,8 +33,8 @@ const userRegister = async (req, res) => {
         const newUser = new Registration({
             username,
             email,
-            password: hashedPassword,  // Store the hashed password
-            confirmPassword,  // Optionally keep confirmPassword in body, but don't store it in DB
+            password: hashedPassword,  
+            confirmPassword,  
         });
 
         await newUser.save();

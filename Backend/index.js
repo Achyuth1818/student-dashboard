@@ -1,20 +1,20 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from "dotenv";
-import bodyParser from 'body-parser'; // Import body-parser
-import cors from 'cors'; // Import cors
-import registerRouter from "./routers/registerRouter.js"; // Ensure the correct path for registerRouter
+import bodyParser from 'body-parser'; 
+import cors from 'cors'; 
+import registerRouter from "./routers/registerRouter.js";
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Middleware to enable CORS
+
 app.use(cors(
     {origin:"*"}
 ));
 
-// Middleware to parse JSON and URL-encoded request bodies
+
 app.use(bodyParser.json());
 
 // Connect to MongoDB

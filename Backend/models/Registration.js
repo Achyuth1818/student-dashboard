@@ -9,7 +9,7 @@ const registrationSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true, // Ensures email is unique
+        unique: true, 
     },
     password: {
         type: String,
@@ -23,7 +23,7 @@ const registrationSchema = new mongoose.Schema({
     },
 });
 
-// Model definition (singular form for the name)
+
 const Registration = mongoose.model('Registration', registrationSchema);
 
 export default Registration;
