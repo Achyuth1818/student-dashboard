@@ -2,9 +2,11 @@ import React from "react";
 import Home from "./components/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Myprofile from "./components/myprofile";
+import Myprofile from "./components/Myprofile";
 import Login from "./components/login";
 import RegisterPage from "./components/RegisterPage";
+import Dashboard from "./components/Dashboard";
+import Payment from "./components/Payment";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+  },
+  {
+    path: "/payment",
+    element: <Payment />,
   },
 ]);
 
