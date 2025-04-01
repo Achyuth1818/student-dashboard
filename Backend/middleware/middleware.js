@@ -4,12 +4,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 const JWT_SECRET = process.env.JWT_SECRET;
 
-/**
- * Middleware to verify JWT token from the 'x-token' header.
- */
 const authenticateToken = (req, res, next) => {
     try {
-        // Get token from x-token header
+        // Get token from x-token heade
         const token = req.headers['x-token'];
 
         if (!token) {

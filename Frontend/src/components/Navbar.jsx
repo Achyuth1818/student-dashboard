@@ -7,19 +7,19 @@ import {
   FaSignOutAlt,
   FaBars,
   FaTimes,
-} from "react-icons/fa"; // Importing icons from react-icons
+} from "react-icons/fa";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // State to handle dropdown visibility
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen); // Toggle the dropdown menu
+    setIsOpen(!isOpen);
   };
 
   return (
     <nav className="bg-gray-800 fixed w-full z-10 p-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-white text-2xl font-bold">MallaReddy University</h1>
+        <h1 className="text-white text-2xl font-bold">Health Trackor</h1>
         <div className="hidden md:flex space-x-4">
           <Link to="/register" className="text-white flex items-center mr-20">
             <FaSignOutAlt className="mr-1" />

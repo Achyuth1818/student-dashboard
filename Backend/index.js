@@ -1,9 +1,10 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import dotenv from "dotenv";
+import dotenv from "dotenv"; 
 import bodyParser from 'body-parser'; 
 import cors from 'cors'; 
 import registerRouter from "./routers/registerRouter.js";
+import fitnessRouter from "./routers/fitnessrouter.js";
 
 dotenv.config();
 const app = express();
@@ -22,13 +23,11 @@ mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('Connected to MongoDB'))
     .catch((error) => console.error('Error connecting to MongoDB:', error));
 
-// Routes
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
-});
+
 
 // Register Routes
-app.use("/api", registerRouter); // Use the registration route
+app.use("/api", registerRouter);
+app.use("/api", fitnessRouter);
 
 
 // Start Server

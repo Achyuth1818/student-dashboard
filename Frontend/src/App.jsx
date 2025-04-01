@@ -2,11 +2,12 @@ import React from "react";
 import Home from "./components/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Myprofile from "./components/Myprofile";
-import Login from "./components/login";
+import MyProfile from "./components/Myprofile";
+import Login from "./components/Login";
 import RegisterPage from "./components/RegisterPage";
-import Dashboard from "./components/Dashboard";
-import Payment from "./components/Payment";
+import FitnessTracker from "./components/FitnessTracker";
+import AddFitness from "./components/AddFitness";
+import ViewProfile from "./components/ViewProfile";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/myprofile",
-    element: <Myprofile />,
+    element: <MyProfile />,
   },
   {
     path: "/register",
@@ -30,12 +31,16 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/dashboard",
-    element: <Dashboard />,
+    path: "/fitness-tracker",
+    element: <FitnessTracker />,
   },
   {
-    path: "/payment",
-    element: <Payment />,
+    path: "/add-fitness",
+    element: <AddFitness />,
+  },
+  {
+    path: "/view-profile",
+    element: <ViewProfile />,
   },
 ]);
 

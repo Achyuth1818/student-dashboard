@@ -46,14 +46,19 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full p-8 bg-white shadow-lg rounded-lg">
+    <div className="min-h-screen flex items-center justify-center py-0 px-0 relative">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('./public/624111.webp')",
+          filter: "blur(8px)",
+        }}
+      />
+      <div className="max-w-md w-full p-8  shadow-lg rounded-lg mt-10 relative z-10">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900">
-            Create an Account
-          </h2>
-          <p className="mt-2 text-gray-600">
-            Join our university community today!
+          <h2 className="text-3xl font-bold text-white ">Create an Account</h2>
+          <p className="mt-2 text-gray-700">
+            Join our health-focused community today!
           </p>
         </div>
 
